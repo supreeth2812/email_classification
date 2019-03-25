@@ -32,11 +32,11 @@ The file name has the sender information as part of the filename. All the filena
 **Multi-class Logistic Regression Classifier to predict the sender based on the body of the email.**
 
 1. Data Cleaning and Transformation
-  * Drop rows with Nan values
-  * Remove punctuations from the text data
-  * Remove digits and whitespaces (tabs, newlines, etc.)
-  * Remove stop words (is, an, the, etc.) from our text data
-  * Word tokenizing and lemmatizing the text data to normalize the words
+..* Drop rows with Nan values
+..* Remove punctuations from the text data
+..* Remove digits and whitespaces (tabs, newlines, etc.)
+..* Remove stop words (is, an, the, etc.) from our text data
+..* Word tokenizing and lemmatizing the text data to normalize the words
   
   After cleaning the data number of words reduced from 10885068 to 5156912 almost 50% reduction of unwanted text.
   
