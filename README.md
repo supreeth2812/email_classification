@@ -63,18 +63,18 @@ The accuracy score increased from 92% to 94.02% after the hyper parameter tuning
 ### Model Performance
 
                  precision	recall   f1-score   support
-      mann-k      0.93       	0.92      0.92       941
+  mann-k      0.93       	0.92      0.92       941
   kaminski-v      0.95      	0.98      0.97       812
   dasovich-j      0.94      	0.91      0.92      1618
-   germany-c      0.89      	0.92      0.91      1523
-shackleton-s      0.92      	0.91      0.91      1204
-     jones-t      0.98      	0.97      0.97      2584
-      bass-e      0.87     	  0.83     	0.85       879
-   lenhart-m      0.95      	0.97      0.96      2645
-      beck-s      0.97      	0.96      0.96      1326
-     symes-k      0.96      	0.99      0.97       780
-
- avg / total      0.94      	0.94      0.94      1431
+  germany-c      0.89      	0.92      0.91      1523
+  shackleton-s      0.92      	0.91      0.91      1204
+  jones-t      0.98      	0.97      0.97      2584
+  bass-e      0.87     	  0.83     	0.85       879
+  lenhart-m      0.95      	0.97      0.96      2645
+  beck-s      0.97      	0.96      0.96      1326
+  symes-k      0.96      	0.99      0.97       780
+  
+  avg / total      0.94      	0.94      0.94      1431
 
 ## Running the tests
 
