@@ -47,9 +47,9 @@ The file name has the sender information as part of the filename. All the filena
 3. Model Selection
       Next we build a machine learning model to do the predictions. We need to predict the sender based on the body of the email. Since     there are 10 senders we need to implement a Mutli-class classifier to make the predictions. I have used 3 multiclass classification     algorithms to do the predictions. 
 
-    i.	Logistic Regression – 92.26%
-    ii.	(Multinomial) Naive Bayes – 73.72%
-    iii.	Linear Support Vector Machine – 90.57%
+    1.	Logistic Regression – 92.26%
+    2.	(Multinomial) Naive Bayes – 73.72%
+    3.	Linear Support Vector Machine – 90.57%
 
     Hence for our data set Logistic Regression works the best and we choose it as the final model.
 
