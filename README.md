@@ -29,5 +29,57 @@ The file name has the sender information as part of the filename. All the filena
 
 
 ### 2. Email Classification
-*I build a Multi-class Logistic Regression Classifier to predict the sender based on the body of the email.*
+**Multi-class Logistic Regression Classifier to predict the sender based on the body of the email.**
 
+1. Data Cleaning and Transformation
+  * Drop rows with Nan values
+  * Remove punctuations from the text data
+  * Remove digits and whitespaces (tabs, newlines, etc.)
+  * Remove stop words (is, an, the, etc.) from our text data
+  * Word tokenizing and lemmatizing the text data to normalize the words
+  
+  After cleaning the data number of words reduced from 10885068 to 5156912 almost 50% reduction of unwanted text.
+  
+2. Feature Engineering
+
+  After cleaning the text data we need to extract features to proceed with machine learning. To make sense out of the text data we use  CountVectorizer to convert the collection of words to a matrix of token counts. This helps use count the word occurrences in body of each email and build a profile for each sender. 
+We use TfidfTransformer to transform a count matrix to a normalized term-frequency matrix. This serves as features for our model training. 
+
+3. Model Selection
+Next we build a machine learning model to do the predictions. We need to predict the sender based on the body of the email. Since there are 10 senders we need to implement a Mutli-class classifier to make the predictions. I have used 3 multiclass classification algorithms to do the predictions. 
+
+1.	Logistic Regression – 92.26%
+2.	(Multinomial) Naive Bayes – 73.72%
+3.	Linear Support Vector Machine – 90.57%
+
+Hence for our data set Logistic Regression works the best and we choose it as the final model.
+
+4. Model Parameter Tuning
+
+We can further tune the hyper parameters to improve the accuracy of the data. Checked for multiple solvers and ‘lbfgs’ gave the best results. Inverse of Regularization strength was set to 1e5 to avoid overfiting. Used l2 penalty as lbfgs does not support l1 penalty. 
+
+The accuracy score increased from 92% to 94.02% after the hyper parameter tuning. 
+
+### Model Performance
+
+                 precision	recall   f1-score   support
+      mann-k      0.93       	0.92      0.92       941
+  kaminski-v      0.95      	0.98      0.97       812
+  dasovich-j      0.94      	0.91      0.92      1618
+   germany-c      0.89      	0.92      0.91      1523
+shackleton-s      0.92      	0.91      0.91      1204
+     jones-t      0.98      	0.97      0.97      2584
+      bass-e      0.87     	  0.83     	0.85       879
+   lenhart-m      0.95      	0.97      0.96      2645
+      beck-s      0.97      	0.96      0.96      1326
+     symes-k      0.96      	0.99      0.97       780
+
+ avg / total      0.94      	0.94      0.94      1431
+
+## Running the tests
+
+  Download **email_classifier** by keeping dataset in same dictionary and run the script.
+  
+## Authors
+
+* **Supreeth MP** -[Email](supreeth2812@gmail.com)
