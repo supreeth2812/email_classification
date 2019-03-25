@@ -32,11 +32,11 @@ The file name has the sender information as part of the filename. All the filena
 **Multi-class Logistic Regression Classifier to predict the sender based on the body of the email.**
 
 1. Data Cleaning and Transformation
-  * Drop rows with Nan values
-  * Remove punctuations from the text data
-  * Remove digits and whitespaces (tabs, newlines, etc.)
-  * Remove stop words (is, an, the, etc.) from our text data
-  * Word tokenizing and lemmatizing the text data to normalize the words
+    * Drop rows with Nan values
+    * Remove punctuations from the text data
+    * Remove digits and whitespaces (tabs, newlines, etc.)
+    * Remove stop words (is, an, the, etc.) from our text data
+    * Word tokenizing and lemmatizing the text data to normalize the words
   
   After cleaning the data number of words reduced from 10885068 to 5156912 almost 50% reduction of unwanted text.
   
@@ -64,22 +64,22 @@ Hence for our data set Logistic Regression works the best and we choose it as th
 
 ```
               precision	  recall   f1-score   support
-  mann-k        0.93       	0.92      0.92       941
-  kaminski-v    0.95      	0.98      0.97       812
+  mann-k        0.93       	0.92      0.92      941
+  kaminski-v    0.95      	0.98      0.97      812
   dasovich-j    0.94      	0.91      0.92      1618
   germany-c     0.89      	0.92      0.91      1523
   shackleton-s  0.92      	0.91      0.91      1204
   jones-t       0.98      	0.97      0.97      2584
-  bass-e        0.87     	  0.83     	0.85       879
+  bass-e        0.87        0.83      0.85      879
   lenhart-m     0.95      	0.97      0.96      2645
   beck-s        0.97      	0.96      0.96      1326
-  symes-k       0.96      	0.99      0.97       780
+  symes-k       0.96      	0.99      0.97      780
   
-  avg / total      0.94      	0.94      0.94      1431
+  avg / total   0.94      	0.94      0.94      1431
 ```
 ## Running the tests
 
-  Download **email_classifier** by keeping dataset in same dictionary and run the script.
+  Download **email_classifier.py** by keeping dataset in same dictionary and run the script.
   
 ## Authors
 
