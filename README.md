@@ -38,15 +38,14 @@ The file name has the sender information as part of the filename. All the filena
     * Remove stop words (is, an, the, etc.) from our text data
     * Word tokenizing and lemmatizing the text data to normalize the words
   
-  After cleaning the data number of words reduced from 10885068 to 5156912 almost 50% reduction of unwanted text.
+    After cleaning the data number of words reduced from 10885068 to 5156912 almost 50% reduction of unwanted text.
   
 2. Feature Engineering
 
-    After cleaning the text data we need to extract features to proceed with machine learning. To make sense out of the text data we use     CountVectorizer to convert the collection of words to a matrix of token counts. This helps use count the word occurrences in body of     each email and build a profile for each sender. 
-    We use TfidfTransformer to transform a count matrix to a normalized term-frequency matrix. This serves as features for our model         training. 
+      After cleaning the text data we need to extract features to proceed with machine learning. To make sense out of the text data we       use CountVectorizer to convert the collection of words to a matrix of token counts. This helps use count the word occurrences in         body of each email and build a profile for each sender. We use TfidfTransformer to transform a count matrix to a normalized term         frequency matrix. This serves as features for our model training. 
 
 3. Model Selection
-    Next we build a machine learning model to do the predictions. We need to predict the sender based on the body of the email. Since       there are 10 senders we need to implement a Mutli-class classifier to make the predictions. I have used 3 multiclass classification     algorithms to do the predictions. 
+      Next we build a machine learning model to do the predictions. We need to predict the sender based on the body of the email. Since     there are 10 senders we need to implement a Mutli-class classifier to make the predictions. I have used 3 multiclass classification     algorithms to do the predictions. 
 
 1.	Logistic Regression – 92.26%
 2.	(Multinomial) Naive Bayes – 73.72%
