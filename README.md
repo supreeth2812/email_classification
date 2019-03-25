@@ -81,5 +81,5 @@ The file name has the sender information as part of the filename. All the filena
   Download **email_classifier.py** by keeping dataset in same dictionary and run the script.
   
 ## Authors
-
+ 
 * **Supreeth MP** -[Email](supreeth2812@gmail.com)
